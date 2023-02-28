@@ -3,9 +3,7 @@ If there is no common prefix, return an empty string "". */
 
 
 // Solution 1: Horizontal Scanning
-// Time Complexity: O(S), where S is the sum of all characters in all strings.
-// Space Complexity: O(1)
-var longestCommonPrefix = function(strs) {
+const longestCommonPrefix = function(strs) {
     if (strs.length === 0) return "";
     let prefix = strs[0];
     for (let i = 1; i < strs.length; i++)
@@ -17,9 +15,7 @@ var longestCommonPrefix = function(strs) {
 };
 
 // Solution 2: Vertical Scanning
-// Time Complexity: O(S), where S is the sum of all characters in all strings.
-// Space Complexity: O(1)
-var longestCommonPrefix2 = function(strs) {
+const longestCommonPrefix2 = function(strs) {
     if (strs.length === 0) return "";
     for (let i = 0; i < strs[0].length; i++)
         for (let j = 0; j < strs.length; j++)
